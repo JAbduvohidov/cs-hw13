@@ -6,6 +6,7 @@ sdelat' tort. I tut glavnoy problemoy vikhodit to chto on ne mojet pereyti na dr
 i iz-za yetogo on ne uspevaet vipolnit' drugie zadachi.
 Tak vot, kak i govorit statya, yeto mojno bilo uluchshit' ispol'zuya asinkhronnost', mujik ne budet jdat' poka ego mat'
 zakonchit smeshivat' testo, ili poka ona zakonchit gotovit tort. on poprosit eyo perezvonit' kogda ona zakonchit, a poka
-ona gotovit, on budet zanimat'sya drugimi zadachami i uspeet produktivno ispol'zovat' svoe vremya )
+ona gotovit, on budet zanimat'sya drugimi zadachami i uspeet produktivno ispol'zovat' svoe vremya ), a svidanie proydet
+voobshe ideal'no (navernoe)
 
 istochnik: https://proglib.io/p/asynchrony/

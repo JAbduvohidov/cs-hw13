@@ -1,0 +1,11 @@
+stat'ya obyasnyaet asinkhronnos' privodya primer sinkhronnosti iz real'noy jizni i govorit kak mojno bilo yeto uluchshit'
+ispol'zuya asinkhronnost'. primerom yavlyaetsya sinkhronniy mir gde jivet "zanyatoy, molodoy" chelovek kotoriy zaplaniroval
+svidanie na vecher i chtobi bit' gotovim, emu nujno vipolnit' perechen' zadach':
+razobrat'sya s dokumentami, zabrat' kostyum iz khimchistki, kupit' cveti iz magazina(cvetochnogo), nu i poprosit' mamu
+sdelat' tort. I tut glavnoy problemoy vikhodit to chto on ne mojet pereyti na drugiyu zadachu poka ne zakonchit predinushuyu
+i iz-za yetogo on ne uspevaet vipolnit' drugie zadachi.
+Tak vot, kak i govorit statya, yeto mojno bilo uluchshit' ispol'zuya asinkhronnost', mujik ne budet jdat' poka ego mat'
+zakonchit smeshivat' testo, ili poka ona zakonchit gotovit tort. on poprosit eyo perezvonit' kogda ona zakonchit, a poka
+ona gotovit, on budet zanimat'sya drugimi zadachami i uspeet produktivno ispol'zovat' svoe vremya )
+
+istochnik: https://proglib.io/p/asynchrony/

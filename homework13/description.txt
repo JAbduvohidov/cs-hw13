@@ -1,0 +1,109 @@
+Что такое:
+    Многопоточное программирование - процесс который запускаестя может иметь сразу несколько потоков которые параллельно
+        выполняют какие-то операции или задачи без какого либо порядка( во времени)
+    Асинхронное программирование - позволяет программе(методу, блоку кода) не останавливаться в определёной строке кода
+        для выполнения какой либо задачи, и продолжать main(родительский) таск. при этом можно дождаться результата
+        выполнения (дословный перевод: await - ожидать) 
+    Параллельное программирование - выполнение задач на нескольких процессорах параллельно (т.е одновременно) не мешая
+        работе других процессов
+        
+Пример:
+    Многопоточное программирование - 
+        using System;
+        using System.Threading;
+         
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                // создаем новый поток
+                Thread myThread = new Thread(new ThreadStart(Count));
+                myThread.Start(); // запускаем поток
+         
+                for (int i = 1; i < 9; i++)
+                {
+                    Console.WriteLine("Главный поток:");
+                    Console.WriteLine(i * i);
+                    Thread.Sleep(300);
+                }
+         
+                Console.ReadLine();
+            }
+         
+            public static void Count()
+            {
+                for (int i = 1; i < 9; i++)
+                {
+                    Console.WriteLine("Второй поток:");
+                    Console.WriteLine(i * i);
+                    Thread.Sleep(400);
+                }
+            }
+        }
+    
+    Асинхронное программирование -
+        using System;
+        using System.Threading;
+        using System.Threading.Tasks;
+         
+        namespace HelloApp
+        {
+            class Program
+            {
+                static void Factorial()
+                {
+                    int result = 1;
+                    for(int i = 1; i <= 6; i++)
+                    {
+                        result *= i;
+                    }
+                    Thread.Sleep(8000);
+                    Console.WriteLine($"Факториал равен {result}");
+                }
+                // определение асинхронного метода
+                static async void FactorialAsync()
+                {
+                    Console.WriteLine("Начало метода FactorialAsync"); // выполняется синхронно
+                    await Task.Run(()=>Factorial());                // выполняется асинхронно
+                    Console.WriteLine("Конец метода FactorialAsync");
+                }
+         
+                static void Main(string[] args)
+                {
+                    FactorialAsync();   // вызов асинхронного метода
+         
+                    Console.WriteLine("Введите число: ");
+                    int n = Int32.Parse(Console.ReadLine());
+                    Console.WriteLine($"Квадрат числа равен {n * n}");
+                     
+                    Console.Read();
+                }
+            }
+        }
+    
+    Параллельное программирование -
+        using System;
+        using System.Threading.Tasks;
+        
+        namespace TaskApp
+        {
+            class Program
+            {
+                static void Main(string[] args)
+                {
+                    Task task = new Task(Display);
+                    task.Start();
+                    task.Wait(); // ожидает окончания задачи task
+                    Console.WriteLine("Завершение метода Main");
+                    Console.ReadLine();
+                }
+         
+                static void Display()
+                {
+                    Console.WriteLine("Начало работы метода Display");
+         
+                    Console.WriteLine("Завершение работы метода Display");
+                }
+            }
+        }
+        
